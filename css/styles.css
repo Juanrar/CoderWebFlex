@@ -204,7 +204,7 @@ h1{
         flex-direction: row;
         padding: 20px;
         background-color: transparent;
-        height: 90vh;
+        min-height: 90vh;
     }
 
     .profile__data-container{
