@@ -1,0 +1,13 @@
+{
+  "name": "coderwebflex",
+  "version": "1.0.0",
+  "description": "Repo de la entrega final del curso Desarrollo Web Flex",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"sass ./scss/main.scss:./css/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
