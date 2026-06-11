@@ -41,6 +41,8 @@ label {
     position: absolute;
     right: 16px;
     font-size: 30px;
+    top:50%;
+    transform: translateY(-50%);
 }
 
 .header__nav {
