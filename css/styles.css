@@ -1,3 +1,11 @@
-
+.heder {
+  background-color: #fff;
+}
+.heder__nav {
+  display: none;
+}
+.heder__logo {
+  width: 64px;
+}
 
 /*# sourceMappingURL=styles.css.map */

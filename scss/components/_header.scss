@@ -1,0 +1,13 @@
+@use "../base/variables" as *;
+
+.heder{
+    background-color: $color-superficie;
+
+    &__nav{
+        display:none;
+    }
+
+    &__logo{
+        width: 64px;
+    }
+}
