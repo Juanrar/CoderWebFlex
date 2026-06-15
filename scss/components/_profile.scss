@@ -1,0 +1,134 @@
+@use "../base/variables" as *;
+
+.profile{
+    container-name: profile;
+    container-type: inline-size;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $color-superficie;
+        max-width: 600px;
+        margin-inline:auto;
+    }
+
+    &__data-container {
+        max-width: 600px;
+        padding: 20px;
+        align-items: center;
+        border-radius: 0px 25px 25px 0px;
+        box-shadow: 0px 0px 9px #0002;
+    }
+
+    &__img-container {
+        max-height: 700px;
+        overflow: hidden;
+        border-radius: 25px 25px 0px 0px;
+    }
+
+    &__img {
+        max-width: 100%;
+        width: 700px;
+    }
+
+    h1 {
+        color: $color-primario;
+    }
+
+    &__skills-container h2 {
+        color: $color-primario;
+    }
+
+    &__skill {
+        list-style: none;
+        display: flex;
+        margin: 10px;
+        max-width: 600px;
+        min-width: 0;
+        gap: 5px;
+        margin-left: 0;
+    }
+
+    .load-bar {
+        border: 2px solid $color-primario;
+        border-radius: 8px;
+        color: $color-superficie;
+        padding: 2px;
+        font-size: 12px;
+        width: 80%;
+        margin: 4px;
+        margin-left: 0;
+    }
+
+    .load-bar__bar {
+        background-color: $color-primario;
+        border-radius: 4px;
+        padding: 4px 6px;
+    }
+
+    .bar--10 {
+        width: 10%;
+    }
+
+    .bar--20 {
+        width: 20%;
+    }
+
+    .bar--30 {
+        width: 30%;
+    }
+
+    .bar--40 {
+        width: 40%;
+    }
+
+    .bar--80 {
+        width: 80%;
+    }
+
+    .bar--90 {
+        width: 90%;
+    }
+
+    @container profile (min-width: 720px) {
+        &__wrapper {
+            flex-direction: row;
+            padding: 20px;
+            background-color: transparent;
+            min-height: 90vh;
+            max-width: 1400px;
+        }
+
+        &__data-container {
+            background-color: $color-superficie;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        &__description h1 {
+            margin-top: 0;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            text-wrap: balance;
+            width: 100%;
+            max-width: 620px;
+            margin-inline: auto;
+        }
+
+        &__data {
+            max-width: 620px;
+        }
+
+        &__img-container {
+            max-height: initial;
+            border-radius: 25px 0px 0px 25px;
+        }
+
+        &__img {
+            height: 100%;
+            object-fit: cover;
+            width: 620px;
+        }
+    }
+}
