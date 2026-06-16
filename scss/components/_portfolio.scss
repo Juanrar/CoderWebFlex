@@ -1,0 +1,73 @@
+@use "../base/variables" as *;
+
+.portfolio{
+    background-color: $color-oscuro;
+    color: $color-superficie;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    container-name: portfolio;
+    container-type: inline-size;
+    justify-content: space-evenly;
+
+    &__title{
+        font-size: 3rem;
+        margin-bottom: 0;
+    }
+
+    &__project-container{
+        display:grid;
+        grid-template-columns:1fr;
+        max-width: 1300px;
+        margin:auto;
+        width: 100%;
+        gap: 12px;
+        padding: 12px;
+        min-height:84vh;
+    }
+
+    &__project{
+        background-image:linear-gradient(#0009,#0009), url(../assets/IMG-20211212-WA0074.jpg);
+        background-position: center;
+        background-size: cover;
+        display: grid;
+        place-content: center;
+        border-radius: 12px;
+    }
+
+    &__project:hover{
+        opacity: 0.74;
+        outline: 2px solid #fff6;
+    }
+
+    @container portfolio (min-width: 56.25rem){
+        &__project-container{
+            grid-template-columns: repeat(auto-fill,minmax(420px,1fr));
+        }
+
+        &__project:first-child{
+            grid-column: span 2;
+        }
+
+        &__project:nth-child(4){
+            grid-column: span 2;
+        }
+    }
+
+    @container portfolio (min-width: 81.25rem){
+        &__project-container{
+            grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        }
+
+        &__project:first-child{
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        &__project:nth-child(4){
+            grid-column: span 2;
+        }
+    }
+
+}
