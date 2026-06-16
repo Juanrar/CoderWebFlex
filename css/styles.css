@@ -1,3 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Comic Sans MS";
+  background-color: #e2eaff;
+  color: rgba(16, 22, 35, 0.8666666667);
+}
+
+body, div, ul, nav, header, footer, a, li, label {
+  margin: 0;
+  padding: 0;
+}
+
 .form {
   min-height: 60vh;
   display: flex;
@@ -316,6 +331,14 @@
     object-fit: cover;
     width: 620px;
   }
+}
+
+footer {
+  padding: 60px;
+  text-align: center;
+  background-color: #18233f;
+  color: #48e;
+  font-size: 11px;
 }
 
 /*# sourceMappingURL=styles.css.map */
