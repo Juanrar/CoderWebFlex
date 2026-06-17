@@ -192,6 +192,8 @@ body, div, ul, nav, header, footer, a, li, label {
   display: grid;
   place-content: center;
   border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
 }
 .portfolio__project:hover {
   opacity: 0.74;
