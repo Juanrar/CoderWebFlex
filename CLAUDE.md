@@ -59,7 +59,7 @@ Web estática **institucional/portfolio personal** en HTML + SASS.
 
 ### Estado del proyecto — checklist de entrega (actualizar a medida que avance)
 
-*Último análisis: 2026-06-11*
+*Último análisis: 2026-06-16*
 
 #### ✅ Lo que ya está hecho
 
@@ -82,7 +82,7 @@ Web estática **institucional/portfolio personal** en HTML + SASS.
 - [ ] Nav con links reales a las 5 páginas (hoy los `<a>` apuntan a `#`) y accesible desde todas las páginas.
 - [ ] Contenido distintivo en cada página (los proyectos del portfolio son placeholders "Proyecto 1..4").
 - [ ] Reemplazar el Lorem ipsum por contenido real.
-- [ ] Agregar `<footer>` (etiqueta semántica que falta).
+- [x] Agregar `<footer>` (etiqueta semántica) — ya presente en `index.html`.
 - [ ] Corregir `lang="en"` → el contenido está en español (`lang="es"`).
 - [ ] Tipos de input correctos en el form (el email usa `type="text"`), `name` en los inputs, `required` donde corresponda.
 
@@ -95,15 +95,23 @@ Web estática **institucional/portfolio personal** en HTML + SASS.
 - [ ] Favicon.
 - [ ] (Opcional/plus) Open Graph, atributos ARIA donde sumen.
 
-#### ❌ SASS (pendiente — requisito central)
+#### ✅ SASS (requisito central — los 5 pilares CUMPLIDOS)
 
-- [ ] Instalar/configurar el compilador SASS y crear estructura de carpetas `scss/` con partials, compilando a `css/`.
-- [ ] Migrar `css/styles.css` a SCSS.
-- [ ] Aplicar **variables** (colores repetidos: `#48e`, `#fff`, `#18233f`, `#e2eaff` → candidatos perfectos).
-- [ ] Aplicar **nesting** (los bloques BEM `.header__*`, `.profile__*`, etc. se prestan al nesting con `&`).
-- [ ] Aplicar **mixins** (candidatos: container queries repetidas, flex-center).
-- [ ] Aplicar **extend** (candidatos: las barras `.bar--XX` comparten base).
-- [ ] Aplicar **partials** (`_variables.scss`, `_mixins.scss`, `_header.scss`, `_profile.scss`, `_portfolio.scss`, `_form.scss`...).
+- [x] Compilador SASS configurado (Dart Sass vía npm, script `dev` con `sass ./scss/main.scss:./css/styles.css --watch`).
+- [x] Estructura de carpetas `scss/` con partials (`base/` y `components/`), compilando a `css/styles.css`.
+- [x] Migrar a SCSS: header, profile, portfolio, form, footer y reset (base) ya migrados.
+- [x] Aplicar **variables** (`_variables.scss` con `$color-primario`, `$color-superficie`, `$color-oscuro`; colores con transparencia vía funciones de color).
+- [x] Aplicar **nesting** (bloques BEM con `&`, container queries anidadas que "burbujean").
+- [x] Aplicar **partials** (`_variables`, `_mixin`, `_extend`, `_reset`, `_header`, `_profile`, `_portfolio`, `_form`, `_footer`; `_responsive` recién creado, ver abajo).
+- [x] **mixins**: `flex-center` creado y usado en `.form`.
+- [x] **extend**: `%barra-base` en `_extend.scss`, aplicado en `.load-bar__bar` (verificado en `styles.css`: estilos en la barra, `.profile` limpio).
+- [x] **Switch del `<link>`** a `styles.css` HECHO (index.html ya apunta a `./css/styles.css`).
+
+**Pendientes menores de SASS (pulido, no bloquean la entrega):**
+- [ ] Mixin `responsive($medida)` con `@content` para reemplazar las `@container ... (min-width)` repetidas (se creó `scss/base/_responsive.scss`, falta escribir/aplicar el mixin).
+- [ ] Verificar visualmente la página completa con `styles.css` y **borrar `oldstyles.css`** (ya cumplió su rol de red de seguridad).
+
+*Notas de la sesión 2026-06-16:* se aprendió y aplicó nesting, `&`, `@use` (scoping por archivo + `as *`), burbujeo de at-rules, comentarios `//` vs `/* */`, mixins (`@include`), extend con `%placeholder`, y rutas relativas de `@use` (mismo nivel = solo nombre; `../` para subir). Bugs recurrentes detectados y resueltos: estilos de escritorio en la capa base (patrón mobile-first), rutas de `@use` con carpeta duplicada, y `@extend` suelto que aplicaba estilos al selector padre equivocado.
 
 #### ❌ Bootstrap y librerías (pendiente)
 

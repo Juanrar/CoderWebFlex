@@ -1,4 +1,5 @@
 @use "../base/variables" as *;
+@use "../base/extend" as *;
 
 .profile{
     container-name: profile;
@@ -62,9 +63,7 @@
     }
 
     .load-bar__bar {
-        background-color: $color-primario;
-        border-radius: 4px;
-        padding: 4px 6px;
+    @extend %barra-base;
     }
 
     .bar--10 {

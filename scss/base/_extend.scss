@@ -1,0 +1,7 @@
+@use "variables" as *;
+
+%barra-base{
+    background-color: $color-primario;
+    border-radius: 4px;
+    padding: 4px 6px;
+}

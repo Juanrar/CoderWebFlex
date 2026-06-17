@@ -221,6 +221,12 @@ body, div, ul, nav, header, footer, a, li, label {
   }
 }
 
+.profile .load-bar__bar {
+  background-color: #48e;
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+
 .profile {
   container-name: profile;
   container-type: inline-size;
@@ -273,11 +279,6 @@ body, div, ul, nav, header, footer, a, li, label {
   width: 80%;
   margin: 4px;
   margin-left: 0;
-}
-.profile .load-bar__bar {
-  background-color: #48e;
-  border-radius: 4px;
-  padding: 4px 6px;
 }
 .profile .bar--10 {
   width: 10%;
