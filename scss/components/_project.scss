@@ -22,13 +22,21 @@
         box-shadow: 0px 0px 9px #0002;
     }
 
-    h1 {
+    h1, h2 {
         color: $color-primario;
+    }
+
+    video {
+        max-width: 100%;
+        height:auto;
+    }
+
+    ul {
+        padding-inline-start: 20px;
     }
 
     @container project (min-width: 720px) {
         &__wrapper {
-            flex-direction: row;
             padding: 20px;
             background-color: transparent;
             min-height: 90vh;
@@ -37,7 +45,8 @@
 
         &__data-container {
             background-color: $color-superficie;
-            display: flex;
+            max-width: 800px;
+            margin-inline:auto;
             align-items: flex-start;
             justify-content: center;
         }

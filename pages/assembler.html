@@ -21,16 +21,52 @@
     </header>
     <main class="project">
         <div class="project__wrapper">
-            <div class="project__data-container">
-                <div class="project__data">
-                    <div class="project__description">
-                        <h1>Projecto</h1>
+            <article class="project__data-container">
+                <header class="project__data">
+                    <h1>Python Assembler Simulator</h1>
+                    <p>
+                        This project is an assembler simulator written in Python that includes 
+                        implementations of various mathematical functions in assembly language, such as 
+                        multiplication, division, square root calculation, and the Fibonacci sequence.
+                    </p>
+                </header>
+                    <section class="project__description">
+                        <figure>
+                            <video muted autoplay loop playsinline preload="metadata">
+                                <source src="../assets/demoAssembler.webm" type="video/webm">
+                            </video>
+                        </figure>
+
+                        <h2>Descripcion</h2>
                         <p>
-                            Descripcion
+                        El simulador de ensamblador permite la ejecución de instrucciones básicas de 
+                        ensamblador utilizando una máquina virtual simple en Python. El proyecto incluye 
+                        las siguientes características:
                         </p>
-                    </div>
-                </div>
-            </div>
+                        <ul>
+                            <li ><strong>Basic instructions:</strong> 
+                                <p>MOV, ADD, JMP, JNZ, CMP, INC, DEC, NOOP, PUSH, POP, CALL, RET, INT, NEG</p>
+                            </li> 
+                            <li><strong>Mathematical functions:</strong>
+                                <dl>
+                                <dt><u>Multiplication:</u></dt>
+                                    <dd>Implemented using successive sums.</dd>
+                                <dt><u>Division:</u></dt>
+                                    <dd>Implemented using successive subtractions.</dd>
+                                <dt><u>Square root:</u></dt>
+                                    <dd>Implemented using a trial-and-error approach.</dd>
+                                <dt><u>Fibonacci:</u></dt>
+                                    <dd>Implemented using a recursive approach.</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <p>
+                            Starting with an assembler code file, it is assembled and 
+                            an executable is created. The function of a processor, operating system,
+                            system calls, and includes is emulated.
+                        </p>
+                    </section>
+            </article>
         </div>
     </main>
 </body>
