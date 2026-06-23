@@ -15,9 +15,18 @@
             </div>
         <nav class="header__nav">
             <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="#">About</a></li>
-                <li class="header__nav-item"><a href="#">portfolio</a></li>
-                <li class="header__nav-item"><a href="#">Contacto</a></li>
+                <li class="header__nav-item"><a href="#about">About</a></li>
+                <li class="header__nav-item">
+                    <input type="checkbox" id="open-projects">
+                    <label for="open-projects">projects</label>
+                    <ul>
+                        <li><a href="pages/dance.html">Dance Studio System</a></li>
+                        <li><a href="pages/feeder.html">Automatic Pet Feeder</a></li>
+                        <li><a href="pages/beatmatch.html">BeatMatch</a></li>
+                        <li><a href="pages/assembler.html">Python Assembler Simulator</a></li>
+                    </ul>
+                </li>
+                <li class="header__nav-item"><a href="#contact">Contact</a></li>
 
             </ul>
         </nav>
@@ -29,7 +38,7 @@
             </div>
             <div class="profile__data-container">
                 <div class="profile__data">
-                    <div class="profile__description">
+                    <div id="about" class="profile__description">
                         <h1>¿Who is Juan Carlos Lorenzo?</h1>
                         <p>
                             Software Engineer with expertise in backend infrastructure,
@@ -83,7 +92,7 @@
             </div>
         </div>
     </main>
-    <section class="portfolio">
+    <section id="projects" class="portfolio">
         <h2 class="portfolio__title">PROJECTS</h2>
         <div class="portfolio__project-container">
             <a href="pages/dance.html" class="portfolio__project">
@@ -108,8 +117,8 @@
             </a>
         </div>
     </section>
-    <section class="form">
-        <h2 class="form__title">CONTACTO</h2>
+    <section id="contact" class="form">
+        <h2 class="form__title">CONTACT</h2>
         <form class="form__form">
             <div class="form__input-container">
                 <label>Nombre

@@ -54,6 +54,26 @@
 
     &__nav-item {
         list-style: none;
+        ul, input {
+            list-style:none;
+            display:none;
+
+            a{
+                display:block;
+                padding: 6px 10px;
+            }
+
+            a:hover {
+                background-color: $color-primario;  
+                color: $color-superficie;
+                text-decoration: none;
+            }
+        }
+        
+        input:checked ~ ul {
+            display: block;
+        }
+
     }
 
     &__nav-item a {
@@ -85,6 +105,22 @@
 
         &__open-nav-button {
             display: none;
+        }
+
+        &__nav-item {
+            color: $color-primario;
+            position: relative;
+            
+            ul {
+                position: absolute;
+                top: 100%;
+                background-color: $color-superficie;
+                padding: 10px 16px;
+                box-shadow: 0 4px 8px;
+                border-radius: 8px;
+                white-space: nowrap;
+                right: 0;
+            }
         }
     }
 }
