@@ -54,6 +54,8 @@
 
     &__nav-item {
         list-style: none;
+        color: $color-primario;
+
         ul, input {
             list-style:none;
             display:none;
@@ -108,7 +110,6 @@
         }
 
         &__nav-item {
-            color: $color-primario;
             position: relative;
             
             ul {

@@ -131,6 +131,7 @@ body, div, ul, nav, header, footer, a, li, label {
 }
 .header__nav-item {
   list-style: none;
+  color: #48e;
 }
 .header__nav-item ul, .header__nav-item input {
   list-style: none;
@@ -175,7 +176,6 @@ body, div, ul, nav, header, footer, a, li, label {
     display: none;
   }
   .header__nav-item {
-    color: #48e;
     position: relative;
   }
   .header__nav-item ul {
