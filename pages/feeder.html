@@ -11,7 +11,7 @@
         <input type = "checkbox" class= "header__checkbox" id="open-menu">
         <label for="open-menu" class="header__open-nav-button" role="button">=</label>
             <div class="header__logo-container">
-                <img class="header__logo" src="../assets/hacker.png">
+                <a href="../index.html"><img class="header__logo" src="../assets/hacker.png"></a>
             </div>
             <nav class="header__nav">
                 <ul class="header__nav-list">
@@ -21,19 +21,43 @@
                 </ul>
             </nav>
         </header>
-        <main class="project">
-            <div class="project__wrapper">
-                <div class="project__data-container">
-                    <div class="project__data">
-                        <div class="project__description">
-                            <h1>Projecto</h1>
-                            <p>
-                                Descripcion
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
+    <main class="project">
+        <div class="project__wrapper">
+            <article class="project__data-container">
+                <header class="project__data">
+                    <h1>Automatic Pet Feeder</h1>
+                    <p>
+                        The main objective of this project is to develop an automated system 
+                        capable of detecting whether a pet's food bowl is empty or full and, 
+                        based on this detection, activate an automatic feeder.
+                    </p>
+                </header>
+                    <section class="project__description">
+                        <figure>
+                                <img src="../assets/demoFeeder.png">
+                        </figure>
+
+                        <h2>What is the objective?</h2>
+                        <p>
+                            An automatic feeder that uses AI to detect when the bowl is empty and dispenses food. 
+                            Ideal for owners who spend time away from home.
+                        </p>
+                    
+                    <h2>Components</h2>
+                    <ul>
+                        <li>Raspberry Pi 3 B</li>
+                        <li>Futaba S3003 servo</li>
+                        <li>CSI Camera</li>
+                        <li>3D printed structure</li>
+                    </ul>
+                    <h2>IA Model</h2>
+                    <p>
+                        Computer vision with MobileNetV2 (transfer learning) in Keras/TensorFlow, 
+                        full/empty binary classification, trained with own dataset + data augmentation.
+                    </p>
+                    </section>
+            </article>
+        </div>
+    </main>
 </body>
 </html>

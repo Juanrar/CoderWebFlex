@@ -11,7 +11,7 @@
         <input type = "checkbox" class= "header__checkbox" id="open-menu">
         <label for="open-menu" class="header__open-nav-button" role="button">=</label>
             <div class="header__logo-container">
-                <img class="header__logo" src="../assets/hacker.png">
+                <a href="../index.html"><img class="header__logo" src="../assets/hacker.png"></a>
             </div>
             <nav class="header__nav">
                 <ul class="header__nav-list">
@@ -25,7 +25,7 @@
             <div class="project__wrapper">
                 <article class="project__data-container">
                     <header class="project__data">
-                        <h1>BeatMatchs</h1>
+                        <h1>BeatMatch</h1>
                         <p>
                             BeatMatch is a tool for music recognition and
                             composition of synchronized videos. It allows you to
@@ -35,17 +35,25 @@
                         </p>
                     </header>
                     <section class="project__description">
-                        <figure>...imagen?</figure>
+                        <figure>
+                            <img src="../assets/demoBeatmatch.png">
+                        </figure>
 
-                        <h2>Descripcion</h2>
-                        <p>lorem</p>
-                        <ul>
-                            <li>
-                                <strong>Tecnologias</strong>
-                                <p>python, flutter, C++</p>
-                            </li>
+                        <h2>How it works?</h2>
                         <p>
-                            aplicacion a futuro pronto a sacar la version 1
+                            Extract audio → recognize the song → download the original → align with FFT → 
+                            recompose the video with ffmpeg without re-encoding, preserving the quality.
+                        </p>
+                        <h2>The problem it solves </h2>
+                        <p>
+                            The audio recorded "live" sounds bad (noise, compression). The 
+                            logical thing to do would be to download the original song 
+                            and paste it in… but how do you align it exactly so that the 
+                            timing isn't noticeable? That's the challenge.
+                        </p>
+                        <h2>Future Vision</h2>
+                        <p>
+                            It's a prototype for a mobile video editing app (iOS + Android) where BeatMatch will be the main feature.
                         </p>
                     </section>
                 </article>

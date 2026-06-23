@@ -366,7 +366,7 @@ footer {
 .project h1, .project h2 {
   color: #48e;
 }
-.project video {
+.project video, .project img {
   max-width: 100%;
   height: auto;
 }
