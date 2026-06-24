@@ -79,10 +79,13 @@ Web estática **institucional/portfolio personal** en HTML + SASS.
 - [x] **Contenido distintivo y real en cada página** (descripción de cada proyecto, sin Lorem ipsum), con semántica rica: `article`, `figure`, `dl/dt/dd`, `video` (assembler).
 - [x] **Portfolio enlaza a las páginas reales** (`pages/*.html`) y cada subpágina tiene link "Back" al index + logo clickeable al home.
 - [x] `title` único por página (cada subpágina tiene su propio `<title>`).
+- [x] **Nav del index funcional**: links About/Contact saltan a anclas reales (secciones con `id="about"`/`id="contact"`); el ítem "projects" es un **dropdown** que despliega las 4 páginas de proyectos.
+- [x] **Dropdown de proyectos sin JS** (técnica checkbox+label anidada): en mobile abre con tap (`input:checked ~ ul`), en desktop flota al estar abierto (`position: absolute`, `top:100%`, `right:0` para no salirse de pantalla) con fondo, padding, sombra y `border-radius`. Rutas relativas correctas a `pages/*.html`.
 
 #### ❌ HTML / Páginas (pendiente)
 
-- [ ] **Nav del index todavía con `href="#"`**: los links About / portfolio / Contacto del menú del index no apuntan a nada. Decidir si serán anclas a secciones (`#profile`, `#portfolio`, `#form`) o páginas. Las subpáginas solo tienen "Back", no la nav completa de 5 destinos.
+- [ ] **Replicar la nav completa a las 4 subpáginas**: hoy `dance/feeder/beatmatch/assembler` solo tienen un link "Back", NO la nav de 5 destinos. Es el paso que cierra el requisito *"5 páginas accesibles desde la nav en todo momento"*. Ojo: al copiar la nav del index hay que **ajustar las rutas relativas** (desde `pages/`: `dance.html` en vez de `pages/dance.html`; `../index.html#about` en vez de `#about`).
+- [ ] **Estado activo** en la nav (marcar la página/sección actual) — opcional, suma puntos.
 - [ ] **Idioma inconsistente**: el contenido ahora está casi todo en INGLÉS pero el `<html lang="en">` convive con textos en español (form "Nombre/Apellido", footer, "Descripcion"). Decidir un idioma y dejar `lang` coherente; corregir el `¿Who is...?` (signo de apertura español sobre frase en inglés).
 - [ ] Tipos de input correctos en el form (el email usa `type="text"`), `name` en los inputs, `required` donde corresponda.
 
@@ -113,6 +116,8 @@ Web estática **institucional/portfolio personal** en HTML + SASS.
 
 *Notas de la sesión 2026-06-16:* se aprendió y aplicó nesting, `&`, `@use` (scoping por archivo + `as *`), burbujeo de at-rules, comentarios `//` vs `/* */`, mixins (`@include`), extend con `%placeholder`, y rutas relativas de `@use` (mismo nivel = solo nombre; `../` para subir). Bugs recurrentes detectados y resueltos: estilos de escritorio en la capa base (patrón mobile-first), rutas de `@use` con carpeta duplicada, y `@extend` suelto que aplicaba estilos al selector padre equivocado.
 
+*Notas de la sesión 2026-06-23 (nav del index):* se construyó el menú con dropdown de proyectos. Conceptos trabajados: anclas (`href="#id"` ↔ `id` en la sección destino), reutilización de la técnica **checkbox + label** anidada para un toggle sin JS (`for`↔`id` únicos; el combinador hermano `~` exige que la `ul` vaya DESPUÉS del input), reparto mobile (tap/`:checked`) vs desktop (flotante con `position: absolute`). Bugs detectados y resueltos: rutas absolutas `/pages/` (deben ser relativas `pages/`), typo BEM `&_nav-item` (un guion) vs `&__nav-item` (dos), `display:none` puesto en la capa equivocada, y el clásico **falso "tapado por z-index"** que en realidad era **clipping horizontal** (el submenú se salía del viewport → se resolvió con `right:0` para que crezca hacia la izquierda). Pendiente que quedó abierto: dar color/`cursor:pointer` al `<label>` "projects" (no lo agarra la regla `&__nav-item a`).
+
 #### ❌ Bootstrap y librerías (pendiente)
 
 - [ ] Linkear Bootstrap (CSS y JS bundle) en todas las páginas.
@@ -121,7 +126,7 @@ Web estática **institucional/portfolio personal** en HTML + SASS.
 
 #### ❌ Estilos avanzados (pendiente)
 
-- [ ] Transiciones (los `:hover` actuales cambian en seco — falta `transition`).
+- [ ] Transiciones (los `:hover` actuales y el dropdown de la nav cambian en seco — falta `transition`). Candidato directo: suavizar la aparición del submenú con `opacity` + `transition` (recordar que `display` NO se anima).
 - [ ] Transformaciones reales de UI. (Nota: hay un `transform: translateY(-50%)` en `_header.scss`, pero es para centrar el botón, no un efecto/animación — no cuenta para el requisito).
 - [ ] Al menos una animación con `@keyframes` (candidato: animar las barras de skills al cargar).
 

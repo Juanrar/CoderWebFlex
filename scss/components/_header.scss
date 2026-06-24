@@ -78,7 +78,7 @@
 
     }
 
-    &__nav-item a {
+    &__nav-item :is(a, label) {
         color: $color-primario;
         text-decoration: none;
     }
