@@ -31,20 +31,13 @@ body, div, ul, nav, header, footer, a, li, label {
   max-width: 600px;
   width: 100%;
   min-height: 120px;
-  resize: vertical;
   margin-bottom: 30px;
-}
-.form__input-container {
-  resize: none;
-  min-height: 120px;
-  font-family: inherit;
 }
 .form__title {
   font-size: 2.4rem;
 }
 @container form (min-width: 56.25rem) {
   .form__form {
-    grid-template-areas: "name lastname" "email email" "message message" "button button";
     gap: 12px;
     background-image: radial-gradient(rgba(24, 35, 63, 0.0666666667), rgba(24, 35, 63, 0.2));
     padding: 30px;
