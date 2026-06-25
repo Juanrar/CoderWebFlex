@@ -9,24 +9,15 @@
     container-name: form;
     container-type: inline-size;
 
+    .btn-primary { background-color: $color-primario; }
+
     &__form{
         padding: 12px;
         max-width: 600px;
         width: 100%;
-        display: grid;
         min-height: 120px;
         resize: vertical;
         margin-bottom:30px;
-    }
-
-    &__input-container :is(input, textarea) {
-        width: 100%;
-        padding: 9px;
-        font-size: 16px;
-        margin: 4px;
-        border: none;
-        box-shadow: 2px 2px 4px #003;
-        background-color: #fffd;
     }
 
     &__input-container{
@@ -35,19 +26,12 @@
         font-family: inherit;
     }
 
-    &__input-container input[type="submit"]{
-        padding: 12px;
-        background-color: $color-primario;
-        color: $color-superficie;
-    }
-
     &__title{
         font-size: 2.4rem;
     }
 
     @container form (min-width: 56.25rem){
     &__form{
-        grid-template-columns: 1fr 1fr;
         grid-template-areas:
         "name lastname"
         "email email"
@@ -58,13 +42,6 @@
         padding: 30px;
         border-radius: 12px;
     }
-
-    &__input-container:nth-child(1){ grid-area: name; }
-    &__input-container:nth-child(2){ grid-area: lastname; }
-    &__input-container:nth-child(3){ grid-area: email; }
-    &__input-container:nth-child(4){ grid-area: message; }
-    &__input-container:nth-child(5){ grid-area: button; }
-
     &__input-container :is(input, textarea){
         border-radius: 4px;
     }
