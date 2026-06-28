@@ -134,11 +134,11 @@ Web estática **institucional/portfolio personal** en HTML + SASS.
 - [ ] **Override de identidad (PARCIAL, 2026-06-28)**: ya se pisó el `background-color` del `.btn-primary` con `$color-primario` (regla anidada en `.form` dentro de `_form.scss:12`). PENDIENTE completar la identidad del botón: el `border-color` sigue azul de fábrica y los estados `:hover`/`:focus`/`:active` de Bootstrap vuelven a pintarlo de azul (hay que pisar también esas pseudoclases). Idealmente sacar la regla de adentro de `.form` para que el override aplique a cualquier `.btn-primary` del sitio, no solo al del formulario.
 - [ ] Librería de animaciones (ej: AOS, Animate.css) linkeada y aplicada.
 
-#### ❌ Estilos avanzados (pendiente)
+#### ✅ Estilos avanzados (COMPLETADO 2026-06-28)
 
-- [ ] Transiciones (los `:hover` actuales y el dropdown de la nav cambian en seco — falta `transition`). Candidato directo: suavizar la aparición del submenú con `opacity` + `transition` (recordar que `display` NO se anima).
-- [ ] Transformaciones reales de UI. (Nota: hay un `transform: translateY(-50%)` en `_header.scss`, pero es para centrar el botón, no un efecto/animación — no cuenta para el requisito).
-- [ ] Al menos una animación con `@keyframes` (candidato: animar las barras de skills al cargar).
+- [x] **Transiciones (2026-06-28)**: el dropdown de proyectos ahora aparece con fade (`opacity` + `visibility` + `transition` en la regla base del `ul`, no en `:checked`); el hover de las tarjetas del portfolio (`&__project`) anima `opacity`/`outline`/`transform`. Resuelto el clásico "`display` no se anima" pasando a `opacity`/`visibility`.
+- [x] **Transformaciones (2026-06-28)**: hover de las tarjetas del portfolio con `transform: scale(1.02)` (efecto real de UI, no el `translateY` de centrado del header).
+- [x] **Animación con `@keyframes` (2026-06-28)**: barras de skills se llenan al cargar. `@keyframes chargeBar { from { width: 0 } }` (sin `to`, para que cada `.bar--XX` use su propio ancho como estado final) aplicado vía `animation` en `.load-bar__bar`.
 
 #### ❌ Optimización y deploy (pendiente)
 

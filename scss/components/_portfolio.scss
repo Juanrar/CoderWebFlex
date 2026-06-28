@@ -41,6 +41,7 @@
     &__project:hover{
         opacity: 0.74;
         outline: 2px solid #fff6;
+        transform: scale(1.02);
     }
 
     @container portfolio (min-width: 56.25rem){

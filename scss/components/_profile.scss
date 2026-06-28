@@ -68,26 +68,32 @@
 
     .bar--10 {
         width: 10%;
+        animation: chargeBar 1.5s;
     }
 
     .bar--20 {
         width: 20%;
+        animation: chargeBar 1.5s;
     }
 
     .bar--30 {
         width: 30%;
+        animation: chargeBar 1.5s;
     }
 
     .bar--40 {
         width: 40%;
+        animation: chargeBar 1.5s;
     }
 
     .bar--80 {
         width: 80%;
+        animation: chargeBar 1.5s;
     }
 
     .bar--90 {
         width: 90%;
+        animation: chargeBar 1.5s;
     }
 
     @container profile (min-width: 720px) {
@@ -130,4 +136,8 @@
             width: 620px;
         }
     }
+}
+
+@keyframes chargeBar {
+  from { width: 0}
 }

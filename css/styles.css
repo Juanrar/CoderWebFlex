@@ -195,6 +195,7 @@ body, div, ul, nav, header, footer, a, li, label {
 .portfolio__project:hover {
   opacity: 0.74;
   outline: 2px solid rgba(255, 255, 255, 0.4);
+  transform: scale(1.02);
 }
 @container portfolio (min-width: 56.25rem) {
   .portfolio__project-container {
@@ -281,21 +282,27 @@ body, div, ul, nav, header, footer, a, li, label {
 }
 .profile .bar--10 {
   width: 10%;
+  animation: chargeBar 1.5s;
 }
 .profile .bar--20 {
   width: 20%;
+  animation: chargeBar 1.5s;
 }
 .profile .bar--30 {
   width: 30%;
+  animation: chargeBar 1.5s;
 }
 .profile .bar--40 {
   width: 40%;
+  animation: chargeBar 1.5s;
 }
 .profile .bar--80 {
   width: 80%;
+  animation: chargeBar 1.5s;
 }
 .profile .bar--90 {
   width: 90%;
+  animation: chargeBar 1.5s;
 }
 @container profile (min-width: 720px) {
   .profile__wrapper {
@@ -333,6 +340,11 @@ body, div, ul, nav, header, footer, a, li, label {
   }
 }
 
+@keyframes chargeBar {
+  from {
+    width: 0;
+  }
+}
 footer {
   padding: 60px;
   text-align: center;
