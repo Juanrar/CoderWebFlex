@@ -75,11 +75,12 @@ body, div, ul, nav, header, footer, a, li, label {
 }
 .header__nav {
   background-color: #fff;
-  position: absolute;
+  position: fixed;
   height: 100vh;
   width: 100vw;
   top: 0;
   z-index: -1;
+  display: none;
 }
 .header__nav-list {
   display: flex;

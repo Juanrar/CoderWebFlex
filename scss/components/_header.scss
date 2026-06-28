@@ -22,11 +22,12 @@
 
     &__nav {
         background-color: $color-superficie;
-        position: absolute;
+        position: fixed;
         height: 100vh;
         width: 100vw;
         top: 0;
         z-index: -1;
+        display:none;
     }
 
     &__nav-list {
