@@ -59,7 +59,7 @@ Web estática **institucional/portfolio personal** en HTML + SASS.
 
 ### Estado del proyecto — checklist de entrega (actualizar a medida que avance)
 
-*Último análisis: 2026-06-25*
+*Último análisis: 2026-06-28*
 
 #### ✅ Lo que ya está hecho
 
@@ -131,7 +131,7 @@ Web estática **institucional/portfolio personal** en HTML + SASS.
 
 - [x] **Bootstrap linkeado en las 6 páginas (2026-06-25)**: CSS en el `<head>` (Bootstrap 5.3.3 vía CDN jsDelivr) y JS bundle antes de `</body>` con `integrity` + `crossorigin`. Verificado en index + las 5 de `pages/`.
 - [x] **Componentes Bootstrap en uso (2026-06-25)**: `contact.html` usa grid (`container`, `row g-3`, `col-md-6`, `col-12`), `form-control`, `form-label`, `btn btn-primary`. Cumple el "usar al menos algunos componentes".
-- [ ] **Override de identidad (PENDIENTE)**: el `btn btn-primary` y demás componentes siguen con el look genérico de Bootstrap (azul de fábrica). Falta pisarlos con la paleta propia (`$color-primario`) en el SCSS para que tengan tu identidad.
+- [ ] **Override de identidad (PARCIAL, 2026-06-28)**: ya se pisó el `background-color` del `.btn-primary` con `$color-primario` (regla anidada en `.form` dentro de `_form.scss:12`). PENDIENTE completar la identidad del botón: el `border-color` sigue azul de fábrica y los estados `:hover`/`:focus`/`:active` de Bootstrap vuelven a pintarlo de azul (hay que pisar también esas pseudoclases). Idealmente sacar la regla de adentro de `.form` para que el override aplique a cualquier `.btn-primary` del sitio, no solo al del formulario.
 - [ ] Librería de animaciones (ej: AOS, Animate.css) linkeada y aplicada.
 
 #### ❌ Estilos avanzados (pendiente)
@@ -143,7 +143,7 @@ Web estática **institucional/portfolio personal** en HTML + SASS.
 #### ❌ Optimización y deploy (pendiente)
 
 - [ ] **Optimizar imágenes (PARCIAL, 2026-06-25)**. Foto de perfil `IMG-20211212-WA0074.jpg` ya en ~235 KB (mejorada). PENDIENTE el grueso del peso: `demoFeeder.png` ~922 KB 🔴 y `demoDance.png` ~686 KB 🔴 (PNG sin pérdida para capturas = anti-patrón; comprimir o pasar a JPG/WebP — comparar con `demoBeatmatch.png` que pesa solo ~169 KB siendo la misma naturaleza). `demoAssembler.webm` ~175 KB ok.
-- [ ] Deploy en Vercel o Netlify (sin config de deploy en el repo todavía).
+- [x] **Deploy hecho (2026-06-28)** en Vercel/Netlify (conectado al repo de GitHub, sin archivo de config en el repo — para un sitio estático no hace falta).
 - [ ] Verificar rutas relativas de imágenes y links en todas las páginas una vez deployado.
 
 ### Convenciones del proyecto

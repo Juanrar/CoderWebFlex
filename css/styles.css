@@ -68,7 +68,6 @@ body, div, ul, nav, header, footer, a, li, label {
   transform: translateY(-50%);
 }
 .header__nav {
-  display: none;
   background-color: #fff;
   position: absolute;
   height: 100vh;
@@ -100,7 +99,9 @@ body, div, ul, nav, header, footer, a, li, label {
 }
 .header__nav-item ul, .header__nav-item input {
   list-style: none;
-  display: none;
+  transition: 0.3s, opacity 0.3s, visibility 0.3s;
+  opacity: 0;
+  visibility: hidden;
 }
 .header__nav-item ul a, .header__nav-item input a {
   display: block;
@@ -112,7 +113,8 @@ body, div, ul, nav, header, footer, a, li, label {
   text-decoration: none;
 }
 .header__nav-item input:checked ~ ul {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 .header__nav-item :is(a, label) {
   color: #48e;

@@ -21,7 +21,6 @@
     }
 
     &__nav {
-        display: none;
         background-color: $color-superficie;
         position: absolute;
         height: 100vh;
@@ -58,7 +57,9 @@
 
         ul, input {
             list-style:none;
-            display:none;
+            transition: 0.3s, opacity 0.3s, visibility 0.3s;
+            opacity: 0;
+            visibility: hidden;
 
             a{
                 display:block;
@@ -73,7 +74,8 @@
         }
         
         input:checked ~ ul {
-            display: block;
+            opacity: 1;
+            visibility: visible;
         }
 
     }
