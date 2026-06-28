@@ -22,6 +22,29 @@
         font-size: 2.4rem;
     }
 
+    .form-label{
+        color: $color-oscuro;
+        font-weight: 700;
+    }
+
+    .form-control{
+        background-color: $color-superficie;
+        border: 2px solid rgba($color-primario, 0.35);
+        color: $color-oscuro;
+        box-shadow: 0 2px 8px rgba($color-oscuro, 0.08);
+    }
+
+    .form-control::placeholder{
+        color: rgba($color-oscuro, 0.55);
+    }
+
+    .form-control:focus{
+        background-color: $color-superficie;
+        border-color: $color-primario;
+        color: $color-oscuro;
+        box-shadow: 0 0 0 0.25rem rgba($color-primario, 0.2);
+    }
+
     @container form (min-width: 56.25rem){
     &__form{
         gap: 12px;

@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: "Comic Sans MS";
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #e2eaff;
   color: rgba(16, 22, 35, 0.8666666667);
 }
@@ -41,6 +41,25 @@ body, div, ul, nav, header, footer, a, li, label {
 }
 .form__title {
   font-size: 2.4rem;
+}
+.form .form-label {
+  color: #18233f;
+  font-weight: 700;
+}
+.form .form-control {
+  background-color: #fff;
+  border: 2px solid rgba(68, 136, 238, 0.35);
+  color: #18233f;
+  box-shadow: 0 2px 8px rgba(24, 35, 63, 0.08);
+}
+.form .form-control::placeholder {
+  color: rgba(24, 35, 63, 0.55);
+}
+.form .form-control:focus {
+  background-color: #fff;
+  border-color: #48e;
+  color: #18233f;
+  box-shadow: 0 0 0 0.25rem rgba(68, 136, 238, 0.2);
 }
 @container form (min-width: 56.25rem) {
   .form__form {
@@ -411,6 +430,19 @@ footer {
   }
   .project__data {
     max-width: 620px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio__title {
+    font-size: 2.4rem;
+  }
+  .portfolio__project-name {
+    font-size: 1.25rem;
+    padding-inline: 12px;
+  }
+  footer {
+    padding: 40px 20px;
   }
 }
 
