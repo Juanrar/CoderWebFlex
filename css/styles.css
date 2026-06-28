@@ -13,6 +13,15 @@ body, div, ul, nav, header, footer, a, li, label {
   padding: 0;
 }
 
+.btn-primary {
+  --bs-btn-bg: #48e;
+  --bs-btn-border-color: #48e;
+  --bs-btn-hover-bg: rgb(25.925, 109.225, 234.175);
+  --bs-btn-hover-border-color: #48e;
+  --bs-btn-active-bg: #48e;
+  --bs-btn-active-border-color: #48e;
+}
+
 .form {
   min-height: 60vh;
   display: flex;
@@ -22,9 +31,6 @@ body, div, ul, nav, header, footer, a, li, label {
   padding: 30px 0;
   container-name: form;
   container-type: inline-size;
-}
-.form .btn-primary {
-  background-color: #48e;
 }
 .form__form {
   padding: 12px;

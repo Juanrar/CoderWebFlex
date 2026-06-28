@@ -1,0 +1,11 @@
+@use "variables" as *;
+@use "sass:color";
+
+.btn-primary{
+    --bs-btn-bg: #{$color-primario};
+    --bs-btn-border-color: #{$color-primario};
+    --bs-btn-hover-bg: #{color.scale($color-primario, $lightness: -15%)};
+    --bs-btn-hover-border-color: #{$color-primario};
+    --bs-btn-active-bg: #{$color-primario};
+    --bs-btn-active-border-color: #{$color-primario};
+}
