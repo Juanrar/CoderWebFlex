@@ -59,7 +59,7 @@ Web estática **institucional/portfolio personal** en HTML + SASS.
 
 ### Estado del proyecto — checklist de entrega (actualizar a medida que avance)
 
-*Último análisis: 2026-06-24*
+*Último análisis: 2026-06-25*
 
 #### ✅ Lo que ya está hecho
 
@@ -90,7 +90,7 @@ Web estática **institucional/portfolio personal** en HTML + SASS.
 - [ ] **`<main>` en `contact.html`**: el formulario entra directo con `<section class="form">`, sin envolver en `<main>` como hacen las otras 4 subpáginas. Detalle semántico (consistencia + accesibilidad), no bloquea.
 - [ ] **Estado activo** en la nav (marcar la página/sección actual) — opcional, suma puntos.
 - [x] **Idioma unificado a inglés (2026-06-24)**: corregido el `¿Who is...` del index, los `<h2>Descripcion</h2>` de assembler/dance, y las labels del form (`Name/Last Name/Email/Message`). Todo coherente con `lang="en"`.
-- [ ] Tipos de input correctos en el form (el email usa `type="text"`), `name` en los inputs, `required` donde corresponda.
+- [x] **Tipos de input correctos en el form (2026-06-25)**: `contact.html` ya usa `type="email"`, `name` en los 4 inputs (name/lastname/email/message) y `required` en todos. Verificado.
 
 #### ✅ SEO y accesibilidad (COMPLETADO 2026-06-24)
 
@@ -127,10 +127,11 @@ Web estática **institucional/portfolio personal** en HTML + SASS.
 
 *Notas de la sesión 2026-06-24 (nav en subpáginas + SEO/accesibilidad):* se replicó la nav completa a las 5 páginas y se cerró entero el bloque de SEO. Conceptos trabajados: el atributo **`name`** de un `<meta>` es la "llave" que el buscador reconoce (inventar `name="project"` = ignorado; solo `name="description"` cuenta); una meta description es **copywriting** (~150 chars, frase real, no etiqueta de 2 palabras), comprimible a partir del propio `<h1>`+`<p>` de cada página. Sobre `alt`: describe el **contenido/función**, nunca el tipo ("image" es redundante, el lector de pantalla ya lo anuncia); cuando la imagen es el único hijo de un `<a>`, el `alt` nombra el **destino del link**; `<video>` no lleva `alt` → se usa `aria-label`. Sobre performance: `loading="lazy"` solo para imágenes **fuera de la pantalla inicial** (ponérselo a un logo above-the-fold es contraproducente). Favicon vía `<link rel="icon">` (mismo patrón que el `<link rel="stylesheet">`). Bugs recurrentes de esta sesión: **el texto correcto en el lugar equivocado** (descripción del proyecto metida en el `alt` del logo en vez del `content` del meta), y **typos que anulan atributos** (`aria-lebel`, `name="project"`) — el patrón de fondo es siempre el mismo: la llave mal escrita = atributo muerto. También se arreglaron los bugs estructurales de `contact.html` (faltaba `h1` y `</body>`).
 
-#### ❌ Bootstrap y librerías (pendiente)
+#### 🟡 Bootstrap y librerías (parcial)
 
-- [ ] Linkear Bootstrap (CSS y JS bundle) en todas las páginas.
-- [ ] Usar al menos algunos componentes Bootstrap adaptados a la identidad propia (sin estilos genéricos del framework).
+- [x] **Bootstrap linkeado en las 6 páginas (2026-06-25)**: CSS en el `<head>` (Bootstrap 5.3.3 vía CDN jsDelivr) y JS bundle antes de `</body>` con `integrity` + `crossorigin`. Verificado en index + las 5 de `pages/`.
+- [x] **Componentes Bootstrap en uso (2026-06-25)**: `contact.html` usa grid (`container`, `row g-3`, `col-md-6`, `col-12`), `form-control`, `form-label`, `btn btn-primary`. Cumple el "usar al menos algunos componentes".
+- [ ] **Override de identidad (PENDIENTE)**: el `btn btn-primary` y demás componentes siguen con el look genérico de Bootstrap (azul de fábrica). Falta pisarlos con la paleta propia (`$color-primario`) en el SCSS para que tengan tu identidad.
 - [ ] Librería de animaciones (ej: AOS, Animate.css) linkeada y aplicada.
 
 #### ❌ Estilos avanzados (pendiente)
@@ -141,7 +142,7 @@ Web estática **institucional/portfolio personal** en HTML + SASS.
 
 #### ❌ Optimización y deploy (pendiente)
 
-- [ ] Optimizar imágenes. Se agregaron demos (`demoDance.png`, `demoFeeder.png`, `demoBeatmatch.png`) y un video (`demoAssembler.webm`); revisar peso/compresión. La foto de perfil `IMG-20211212-WA0074.jpg` sigue sin comprimir y con nombre poco descriptivo.
+- [ ] **Optimizar imágenes (PARCIAL, 2026-06-25)**. Foto de perfil `IMG-20211212-WA0074.jpg` ya en ~235 KB (mejorada). PENDIENTE el grueso del peso: `demoFeeder.png` ~922 KB 🔴 y `demoDance.png` ~686 KB 🔴 (PNG sin pérdida para capturas = anti-patrón; comprimir o pasar a JPG/WebP — comparar con `demoBeatmatch.png` que pesa solo ~169 KB siendo la misma naturaleza). `demoAssembler.webm` ~175 KB ok.
 - [ ] Deploy en Vercel o Netlify (sin config de deploy en el repo todavía).
 - [ ] Verificar rutas relativas de imágenes y links en todas las páginas una vez deployado.
 
